@@ -1,5 +1,23 @@
 # TP Frontend 2019
 
+Trabajo integrador final 2019 para la materia Técnicas y Tecnologías Avanzadas de Desarrollo de Software - UTN frro
+
+---------------
+
+
+Participantes
+---------------
+- (40012) Barnatan, Favio
+- (42743) De Waele, Ezequiel
+- (43776) Rossi, Sebastian
+
+
+Tema elegido
+---------------
+Desarrollaremos la web de un hotel con funcionalidad para la reserva de habitaciones.
+
+
+
 ## 1 - Enunciado
 ### 1.1 - Desarrollo
 Crear un nuevo frontend para un sitio que brinde una api pública, utilizando:

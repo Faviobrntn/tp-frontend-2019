@@ -1,0 +1,37 @@
+<main role="main" class="container">
+	<div class="row">
+		<div class="col-md-12 blog-main my-4">
+			<h3 class="pb-4 mb-4 font-italic border-bottom">
+				<a class="close float-right" routerLink="/">
+					<span aria-hidden="true">&times;</span>
+				</a>
+				Detalles
+			</h3>
+		</div>
+	</div>
+	<div class="row my-4">
+		<div class="col-12">
+			<table>
+				<tr>
+					<th>Nombre:</th>
+					<td>{{entidad.nombre}}</td>
+				</tr>
+				<tr>
+					<th>Número:</th>
+					<td>{{entidad.numero}}</td>
+				</tr>
+				<tr>
+					<th>Capacidad:</th>
+					<td>{{entidad.capacidad}}</td>
+				</tr>
+				<tr>
+					<th>Precio:</th>
+					<td>$ {{entidad.precio}}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-12 mb-4">
+			<button type="button" class="btn btn-secondary" routerLink="/">Cerrar</button>
+		</div>
+	</div>
+</main>

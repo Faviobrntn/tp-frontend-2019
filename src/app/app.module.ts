@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { HabitacionesComponent } from './componentes/habitaciones/habitaciones.component';
+import { DetallesComponent } from './componentes/detalles/detalles.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
-    HabitacionesComponent
+    HabitacionesComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,

@@ -37,4 +37,12 @@ export class HabitacionesService {
     return this.http.get(this.URL_API + `/search/${search}`);
   }
 
+
+  /**
+	 * get
+	 */
+  public get(id: string) {
+    return this.http.get(this.URL_API + `/${id}`);
+  }
+
 }

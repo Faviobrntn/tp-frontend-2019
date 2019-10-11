@@ -49,17 +49,24 @@
                     <th>Precio</th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let habitacion of habitacionesService.habitaciones">
+                    <tr *ngFor="let habitacion of habitaciones">
                         <td>{{habitacion.nombre}}</td>
                         <td>{{habitacion.numero}}</td>
                         <td>{{habitacion.capacidad}}</td>
                         <td>{{habitacion.precio}}</td>
                         <td>
-                            <a (click)="get(habitacion)">
-                                <i class="material-icons">edit</i>
+                            <a (click)="detalle(habitacion)">
+                                <i class="material-icons"> Ver</i>
                             </a>
+                        </td>
+                        <td>
+                            <a (click)="get(habitacion)">
+                                <i class="material-icons"> Editar</i>
+                            </a>
+                        </td>
+                        <td>
                             <a (click)="eliminar(habitacion._id)">
-                                <i class="material-icons">delete</i>
+                                <i class="material-icons"> Eliminar</i>
                             </a>
                         </td>
                     </tr>

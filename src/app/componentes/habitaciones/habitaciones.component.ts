@@ -65,6 +65,10 @@ export class HabitacionesComponent implements OnInit {
   	get(habitacion: Habitaciones){
     	this.habitacionesService.selectedHabitacion = habitacion;
   	}
+	  
+	detalle(habitacion: Habitaciones) {
+		this.router.navigate(['detalles', habitacion._id]);
+	};
 
   	eliminar(_id: string){
 		if(confirm('Estas seguro de que desea eliminar esta habitación?')){
@@ -83,16 +87,17 @@ export class HabitacionesComponent implements OnInit {
 
 	resetForm(form?: NgForm){
 		if(form){
-		form.reset();
+			form.reset();
 			this.habitacionesService.selectedHabitacion = new Habitaciones();
+			this.listado();
 		}
 	}
 
 
   	buscar(search) {
 		this.habitacionesService.buscarHabitacion(search.value)
-			.subscribe((res) => {
-				if(res.length){
+			.subscribe((res) => {				
+				if(res[0]){
 					this.habitaciones = res as Habitaciones[];
 				}else{
 					M.toast({html: 'Sin resultados'});

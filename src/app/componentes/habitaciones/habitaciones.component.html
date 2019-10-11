@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <div class="col s5">
+            <div class="card-content">
+                <form #habitacionForm = "ngForm">
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]= "habitacionesService.selectedHabitacion._id">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="habitacionesService.selectedHabitacion.nombre"
+                            placeholder="Nombre habitación">
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" name="numero" #nombre="ngModel" [(ngModel)]="habitacionesService.selectedHabitacion.numero"
+                            placeholder="Numero habitación">
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" name="capacidad" #nombre="ngModel" [(ngModel)]="habitacionesService.selectedHabitacion.capacidad"
+                            placeholder="Capacidad habitación">
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" name="precio" #nombre="ngModel" [(ngModel)]="habitacionesService.selectedHabitacion.precio"
+                            placeholder="Precio habitación">
+                        </div>
+                        <div class="card-action">
+                            <div class="input-field col s12">
+                                <button class="btn rigth" (click)="resetForm(habitacionForm)">Limpiar</button>
+                                <button class="btn rigth" style="margin-left: 3px" (click)="nuevo(habitacionForm)">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col s7">
+            <div class="row">
+                <div class="input-field col s8">
+                    <input type="text" name="search" #search="" placeholder="Buscar">
+                </div>
+                <div class="input-field col s4">
+                    <button class="btn btn-sm" style="margin-left: 3px" (click)="buscar(search)">Buscar</button>
+                </div>
+            
+            </div>
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Numero</th>
+                    <th>Capacidad</th>
+                    <th>Precio</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let habitacion of habitacionesService.habitaciones">
+                        <td>{{habitacion.nombre}}</td>
+                        <td>{{habitacion.numero}}</td>
+                        <td>{{habitacion.capacidad}}</td>
+                        <td>{{habitacion.precio}}</td>
+                        <td>
+                            <a (click)="get(habitacion)">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            <a (click)="eliminar(habitacion._id)">
+                                <i class="material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

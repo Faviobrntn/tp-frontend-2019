@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Habitaciones } from '../models/habitaciones';
-import { HabitacionesComponent } from '../components/habitaciones/habitaciones.component';
+import { Habitaciones } from '../modelos/habitaciones';
+import { HabitacionesComponent } from '../componentes/habitaciones/habitaciones.component';
 
 @Injectable({
   providedIn: 'root'

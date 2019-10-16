@@ -23,7 +23,7 @@
                         </div>
                         <div class="card-action">
                             <div class="input-field col s12">
-                                <button class="btn rigth" (click)="resetForm(habitacionForm)">Limpiar</button>
+                                <button class="btn rigth" (click)="resetForm(habitacionForm)">Cancelar</button>
                                 <button class="btn rigth" style="margin-left: 3px" (click)="nuevo(habitacionForm)">Guardar</button>
                             </div>
                         </div>
@@ -56,17 +56,17 @@
                         <td>{{habitacion.precio}}</td>
                         <td>
                             <a (click)="detalle(habitacion)">
-                                <i class="material-icons"> Ver</i>
+                                <i class="material-icons"> remove_red_eye</i>
                             </a>
                         </td>
                         <td>
                             <a (click)="get(habitacion)">
-                                <i class="material-icons"> Editar</i>
+                                <i class="material-icons"> edit</i>
                             </a>
                         </td>
                         <td>
                             <a (click)="eliminar(habitacion._id)">
-                                <i class="material-icons"> Eliminar</i>
+                                <i class="material-icons"> delete</i>
                             </a>
                         </td>
                     </tr>
